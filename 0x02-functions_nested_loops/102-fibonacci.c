@@ -16,10 +16,10 @@ int main(void)
 		j = k;
 		printf("%lu", k);
 		if (count == 49)
-			_putchar('\n');
+			putchar('\n');
 		else
 		{
-			printf(",");
+			printf(", ");
 		}
 	}
 	return (0);
