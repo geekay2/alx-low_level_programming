@@ -6,23 +6,22 @@
  */
 void rev_string(char *s)
 {
-	char tmp;
-	int i, length1, length2;
+	int i, j;
+	char r[1000];
 
-	length1 = 0;
-	length2 = 0;
 
-	while (s[length1] != '\0)
-		length1++
-
-	length2 = length1 -1;
-	for (i = 0; i < length1 / 2; i++)
+	i = j = 0;
+	while (s[i] != '\0')
 	{
-		"samalx" "xlamas"
-		tmp = s[i];
-		s[i] = s[length2];
-		s[length2] = tmp;
-		length2 = 1;
-
+		r[i] = s[i];
+		i++;
 	}
+	i--;
+	while (i >= 0)
+	{
+		s[i] = r[j];
+		i--;
+		j++;
+	}
+	s[j++] = '\0';
 }
