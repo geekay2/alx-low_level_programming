@@ -1,4 +1,6 @@
 #include "main.h"
+#include <string.h>
+
 /**
  * puts_half - Prints out the first half of a string.
  * @str: input string to print.
