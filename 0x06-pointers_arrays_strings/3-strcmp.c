@@ -7,7 +7,7 @@
  * @s1: parameter1
  * @s2: parameter2
  *
- * Return: integer
+ * Return: If the strings are equals return "0", if not return other number
  */
 
 int _strcmp(char *s1, char *s2);
