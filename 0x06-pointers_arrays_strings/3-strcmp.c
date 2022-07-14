@@ -2,21 +2,17 @@
 #include <stdio.h>
 
 /**
- * _strcmp -> for comparing two strings
- *
+ * _strcmp - compares two strings, ending at the first byte that is different.
  * @s1: parameter1
  * @s2: parameter2
- *
- * Return: If the strings are equals return "0", if not return other number
+ * Return: the difference between the first character that are not the same
  */
 
 int _strcmp(char *s1, char *s2);
 {
-	for (; (*s1 != '\0' && *s2 != '\0') && (*s1 == *s2); s1++, s2++)
+	int i;
+
+	for (i = 0; s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i]; i++)
 		;
-	if (*s1 == *s2)
-	{
-		return (0);
-	}
-	return (*s1 - *s2);
+	return (s1[i] - s2[i]);
 }
