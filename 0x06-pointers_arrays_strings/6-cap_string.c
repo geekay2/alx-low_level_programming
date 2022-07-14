@@ -1,22 +1,24 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * leet - encodes a string into leetspeek.
+ * cap_string - capitalizes all words of a string.
  * @s: pointer to input string.
- * Return: Returns pointer to leetspeek string.
+ * Return: Returns pointer to capitalized string.
  */
-char *leet(char *s)
+char *cap_string(char *s)
 {
 	int i, j;
-	char subs[] = "aAeEoOtTlL";
-	char le[] = "43071";
+	char sep[] = " \t\n,;.!?\"(){}";
 
-	i = 0;
-	for (i = 0; s[i] != '\0'; i++)
+	i = 1;
+	if (s[0] >= 'a' && s[0] <= 'z')
+		s[0] -= ('a' - 'A');
+	while (s[i] != '\0')
 	{
-		for (j = 0; subs[j] != '\0'; j++)
-			if (s[i] == subs[j])
-				s[i] = le[j / 2];
+		for (j = 0; sep[j] != '\0'; j++)
+			if (s[i - 1] == sep[j] && (s[i] >= 'a' && s[i] <= 'z'))
+				s[i] -= ('a' - 'A');
+		i++;
 	}
 	return (s);
 }
