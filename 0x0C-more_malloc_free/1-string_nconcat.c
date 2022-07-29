@@ -13,9 +13,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int s1count, s2count, sizeBuffer, i;
 
 	if (s1 == NULL)
-		s1 = "";
+		s1 = " ";
 	if (s2 == NULL)
-		s2 = "";
+		s2 = " ";
 	for (s1count = 0; s1[s1count]; s1count++)
 		;
 	for (s2count = 0; s2[s2count]; s2count++)
